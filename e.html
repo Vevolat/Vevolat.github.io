@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="Ch-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悄悄话</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-text {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .bg-video {
+            position: relative;
+            z-index: -1; /* 确保视频在其他元素下方 */
+        }
+        body {
+            margin: 0;
+            overflow-y: hidden;
+        }
+        .content {
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+            padding-right: 17px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            padding: 50px;
+        }
+        .scrollable {
+            height: 100%;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+        .box {
+            width: 100%;
+            height: 200px;
+        }
+        .gradient-text {
+            font-size: 2em;
+            background-image: linear-gradient(to right, blue, pink);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="bg-video">
+        <source src=".\static\img\tt.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+    <div class="scrollable">
+        <div class="content" class="gradient-text">
+            <div class="gradient-text" class="id"><h2>联系方式</h2></div>
+            <div id="id"></div>
+            <h3 class="gradient-text">邮箱:1845423153@qq.com</h3>
+            <h3 class="gradient-text">Github: Vevolat</h3>
+            <h3 class="gradient-text">抖音: vevo1103</h3>
+            <!-- 添加更多内容以实现滚动效果 -->
+        </div>
+    </div>
+    <script>
+document.querySelector('.back-button').addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
+    </script>
+</body>
+</html>
