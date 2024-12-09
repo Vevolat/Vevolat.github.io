@@ -1,0 +1,320 @@
+/* 初始化 */
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  transition: all 0.3s;
+  color: #18191c;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #61666d;
+}
+.messageBoard {
+  width: 800px;
+  box-sizing: border-box;
+  margin: auto;
+}
+/* 头部 */
+.header {
+  height: 34px;
+  margin-bottom: 22px;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+}
+
+.header ul > li:first-child {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #18191c;
+  padding-right: 4px;
+}
+.header ul > li:nth-child(2) {
+  font-size: 13px;
+  height: 20px;
+  margin-right: 36px;
+  line-height: 20px;
+}
+.header ul > li:nth-child(3),
+.header ul > li:nth-child(5) {
+  font-size: 13px;
+  line-height: 20px;
+  color: #61666d;
+}
+.header ul > li:nth-child(3) {
+  padding-right: 12px;
+}
+
+.header ul > li:nth-child(4) {
+  height: 8px;
+  border: 1px solid #ccc;
+}
+.header ul > li:nth-child(5) {
+  padding-left: 12px;
+}
+.header ul > li:last-child {
+  margin-left: auto;
+  z-index: 999;
+  position: relative;
+}
+/* 头部更多框 */
+.header .headerMoreList {
+  width: 120px;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 0px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 24px;
+  right: 0px;
+  display: none;
+}
+.header .headerMoreList li a {
+  font-size: 14px;
+  padding: 0px 15px 0px 15px;
+}
+.header .headerMoreList li a:hover {
+  background-color: #f1f2f3;
+  color: #00adea;
+}
+/* 发送部分 */
+
+.send {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.send .pic img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 0px 6px 0px 6px;
+}
+.send .text {
+  display: flex;
+  flex: 1;
+}
+.send .text #input {
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  resize: none;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  overflow: hidden;
+  background-color: #f1f2f3;
+  margin: 0px 10px 0px 6px;
+  padding-left: 10px;
+}
+.send .text #input::placeholder {
+  /* line-height: 50px; */
+  font-size: 13px;
+  color: #9499a0;
+}
+.send .text button {
+  width: 70px;
+  height: 50px;
+  background-color: #7fd6f5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* 焦点样式 */
+.focus {
+  color: #00adea !important;
+  cursor: pointer;
+}
+
+/* 全局弹出 */
+/* 全屏阴影 */
+.windowShadow {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+/* 弹窗内容 */
+.commend {
+  background-color: #fff;
+  width: 490px;
+  height: 210px;
+  margin: 360px auto;
+  border-radius: 4px;
+}
+.commend span {
+  padding: 46px 20px 58px 20px;
+  text-align: center;
+  display: block;
+  font-size: 14px;
+}
+/* 弹窗按键 */
+.commend .buttonBox {
+  display: flex;
+  justify-content: center;
+}
+.commend button {
+  width: 120px;
+  height: 40px;
+  border: 1px solid #e3e5e7;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  margin: 0px 10px;
+}
+.commend button:hover {
+  cursor: pointer;
+}
+.commend .open {
+  color: #18191c;
+}
+.commend .open:hover {
+  background-color: #e3e5e7;
+}
+.commend .close {
+  background-color: #00adea;
+  color: #fff;
+}
+
+/* 留言区 */
+.list .personOnce {
+  display: flex;
+  margin: 22px 0px;
+}
+.list .personOnce .icon {
+  width: 60px;
+  box-sizing: border-box;
+  padding-left: 6px;
+}
+.list .personOnce .icon img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.list .personOnce .repeatOnce {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e3e5e7;
+  padding-bottom: 14px;
+}
+.list .personOnce .repeatOnce .info {
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.list .personOnce .repeatOnce .info .id {
+  padding-right: 6px;
+  color: #fc7499;
+}
+
+.list .personOnce .repeatOnce .content {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.list .personOnce .repeatOnce .others {
+  display: flex;
+  align-items: center;
+}
+.list .personOnce .repeatOnce .others div {
+  padding-right: 24px;
+  color: #9499a0;
+  font-size: 13px;
+}
+.list .personOnce .repeatOnce .others div:last-of-type {
+  margin-left: auto;
+  padding-right: 0;
+}
+
+.list .personOnce .repeatOnce .info .id:hover,
+.list .personOnce .repeatOnce .info .level:hover,
+.list .personOnce .repeatOnce .others .iconfont:hover,
+.list .personOnce .repeatOnce .others .icon-cai:hover,
+.list .personOnce .repeatOnce .others .reply:hover,
+.list .personOnce .repeatOnce .others .icon-gengduo:hover,
+.icon-gengduo:hover {
+  color: #00adea !important;
+  cursor: pointer;
+}
+
+/* 留言更多框 */
+.list .reply + div {
+  position: relative;
+}
+.list .listMoreList {
+  width: 120px;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 0px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  display: none;
+}
+.list .listMoreList li a {
+  font-size: 14px;
+  padding: 0px 15px 0px 15px;
+}
+.list .listMoreList li a:hover {
+  background-color: #f1f2f3;
+  color: #00adea;
+}
+
+/* 删除框 */
+.delete {
+  width: 260px;
+  height: 94px;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  bottom: 32px;
+  left: -70px;
+  display: none;
+}
+.delete span {
+  padding: 14px 20px;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+}
+.delete .deleteButtonBox {
+  display: flex;
+  justify-content: center;
+}
+.delete button {
+  width: 42px;
+  height: 22px;
+  border: 1px solid #e3e5e7;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 12px;
+  margin: 0px 10px;
+}
+.delete button:hover {
+  cursor: pointer;
+}
+.delete .deleteOpen {
+  background-color: #00adea;
+  color: #fff;
+}

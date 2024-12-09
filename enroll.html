@@ -7,6 +7,7 @@
     <title>注册</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="enroll.js"></script>
 </head>
 <body>
 <div id="page" class="site">
@@ -17,27 +18,48 @@
                 <p>如果你有账号<br>可以<a href="login.html">点击这里</a>进行登录.</p>
             </div>
             <div class="main">
-                <form action="">
+                <form onsubmit="return validateForm()">
                     <p>
-                        <input type="email" placeholder="注册邮箱">
+                        <input type="text" id="username" placeholder="用户名字">
+                    </p>
+                    <p>
+                        <input type="email" id="email" placeholder="注册邮箱">
                     </p>
                     <p class="password">
-                        <input type="password" placeholder="请输入密码">
+                        <input type="password" id="password1" placeholder="请输入密码">
                         <i class="ri-eye-off-line"></i>
                     </p>
                     <p class="password">
-                        <input type="password" placeholder="再次输入密码">
+                        <input type="password" id="password2" placeholder="再次输入密码">
                         <i class="ri-eye-off-line"></i>
                     </p>
                     <p>
-                        <input type="submit" class="submit" value="注册" onclick="window.location.href='login.html'; return false;">
+                        <input type="submit" class="submit" value="注册">
                     </p>
-                    </form>
-                    </ul>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+<script>
+function validateForm() {
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password1 = document.getElementById('password1').value;
+    const password2 = document.getElementById('password2').value;
+
+    if (password1 !== password2) {
+        alert('请检查密码');
+        return false;
+    }
+
+    // 这里可以添加代码将用户名字、注册邮箱和密码记录下来
+    // 例如：localStorage.setItem('username', username);
+
+    // 如果验证通过，跳转到登录页面
+    window.location.href = 'login.html';
+    return false; // 阻止表单提交，因为我们已经手动处理了跳转
+}
+</script>
 </body>
 </html>

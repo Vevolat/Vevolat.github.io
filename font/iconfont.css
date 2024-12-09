@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3134897 */
+  src: url("iconfont.woff2?t=1641968670871") format("woff2"),
+    url("iconfont.woff?t=1641968670871") format("woff"),
+    url("iconfont.ttf?t=1641968670871") format("truetype");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  color: #9499a0;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhiding:before {
+  content: "\e603";
+}
+
+.icon-dianzan:before {
+  content: "\e702";
+}
+
+.icon-cai:before {
+  content: "\e701";
+}
+
+.icon-ic_userlevel_0:before {
+  content: "\e6cb";
+  color: #bfbfbf;
+}
+
+.icon-ic_userlevel_1:before {
+  content: "\e6cc";
+  color: #bfbfbf;
+}
+
+.icon-ic_userlevel_2:before {
+  content: "\e6cd";
+  color: #94dcb3;
+}
+
+.icon-ic_userlevel_3:before {
+  content: "\e6ce";
+  color: #91d1e4;
+}
+
+.icon-ic_userlevel_4:before {
+  content: "\e6cf";
+  color: #ffb47f;
+}
+
+.icon-ic_userlevel_5:before {
+  content: "\e6d0";
+  color: #ff6e1b;
+}
+
+.icon-ic_userlevel_6:before {
+  content: "\e6d1";
+  color: #ff1815;
+}
+
+.icon-gengduo:before {
+  content: "\e657";
+}
+
+.icon-gengduo-copy:before {
+  content: "\e705";
+}

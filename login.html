@@ -13,36 +13,62 @@
     <div class="container">
         <div class="login">
             <div class="hero">
-                <h1>欢迎  你的到来<br>Hello Bro</h1>
-                <p>如果你没有账号<br>可以<a href="enroll.html">点击这里</a>进行注册.</p>
+                <h1>欢迎 你的到来<br>Hello Bro</h1>
+                <!--<p>如果你没有账号<br>可以<a href="enroll.html">点击这里</a>进行注册.</p>-->
             </div>
             <div class="main">
                 <form action="">
                     <p>
-                        <input type="email" placeholder="邮箱">
+                        <input type="text" id="nameInput" placeholder="名字" oninput="saveName(this.value)">
                     </p>
                     <p class="password">
                         <input type="password" placeholder="密码">
                         <i class="ri-eye-off-line"></i>
-                        <a href="back.html">找回密码</a>
+                        <!--<a href="back.html">找回密码</a>-->
                     </p>
                     <p>
-                        <input type="submit" class="submit" value="登录" onclick="window.location.href='index.html'; return false;">
+                        <input type="submit" class="submit" value="登录" onclick="window.location.href='lyq.html'; return false;">
+                    </p>
+                    <p>
+                        <h4 type="submit" class="submit">当前暂时无法登录，所有用户可直接输入用户名登录，密码无效空值</h4>
                     </p>
                 </form>
-                <div class="options">
-                    <div class="separator">
-                        <p>使用其他方式登录</p>
-                    </div>
-                    <ul>
-                        <li><a href="#"><i class="ri-steam-fill ri-2x"></i></a></li>
-                        <li><a href="#"><i class="ri-playstation-fill ri-2x"></i></a></li>
-                        <li><a href="#"><i class="ri-xbox-fill ri-2x"></i></a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
 </div>
+<!--<script>
+    function validateLogin() {
+        const username = document.getElementById('nameInput').value;
+        const password = document.querySelector('.password input[type="password"]').value;
+        // 假设这里有一个函数 validateUser 用于验证用户名和密码
+        if (!validateUser(username, password)) {
+            alert('用户名或密码错误');
+            return false;
+        }
+        window.location.href = 'lyq.html';
+        return false; // 阻止表单提交
+    }
+    
+    // 这里应该有一个函数 validateUser，它会与 enroll.html 中的数据进行比对
+    // 由于没有具体的 enroll.html 文件内容，这里只是一个示例
+    function validateUser(username, password) {
+        // 这里应该是与 enroll.html 或服务器验证逻辑
+        // 返回 true 或 false
+        // 假设 enroll.html 中的数据可以通过 AJAX 或 Fetch API 获取
+        // 下面是一个示例代码，你需要根据实际情况来实现
+        fetch('enroll.html')
+            .then(response => response.text())
+            .then(data => {
+                // 假设 enroll.html 中的数据是以 JSON 格式存储的
+                const users = JSON.parse(data);
+                return users.some(user => user.username === username && user.password === password);
+            })
+            .catch(error => {
+                console.error('获取注册数据失败:', error);
+                return false;
+            });
+    }
+    </script>-->
 </body>
 </html>

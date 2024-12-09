@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>留言板</title>
+    <link rel="stylesheet" href="basic.css"/>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="messageBoard">
+      <!-- 头部 -->
+      <div class="header">
+        <ul>
+          <li>评论</li>
+          <li>0</li>
+          <li>最热</li>
+          <li></li>
+          <li>最新</li>
+          <li>
+            <span class="iconfont icon-gengduo"></span>
+            <div class="headerMoreList">
+              <ol>
+                <li><a href="javascript:;">开启评论精选</a></li>
+                <li><a href="javascript:;">关闭评论</a></li>
+                <li><a href="javascript:;">关闭弹幕</a></li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 输入框 -->
+      <div class="send">
+        <div class="pic">
+          <img src="./images/pics/0060W0Exgy1ghg1bp52cxj30b40b43z4.jpg" />
+        </div>
+        <div class="text">
+          <textarea
+            name="text"
+            id="input"
+            cols="80"
+            rows="5"
+            placeholder="发一条友善的评论"
+          ></textarea>
+          <button type="submit">发布</button>
+        </div>
+      </div>
+      <!-- 评论展示 -->
+      <div class="list"></div>
+    </div>
+    <!-- 全局弹出 -->
+    <div class="windowShadow">
+      <!-- 开启精选评论 -->
+      <div class="commend">
+        <span> </span>
+        <div class="buttonBox">
+          <button class="open"></button>
+          <button class="close">取消</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
