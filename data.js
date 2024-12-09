@@ -1,4 +1,4 @@
-let savedName = localStorage.getItem('username') || '惊讶叽叽';
+let savedName = localStorage.getItem('username');
 
 const peopleData = [
     {
